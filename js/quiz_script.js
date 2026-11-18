@@ -396,11 +396,13 @@ window.onload = async function() {
             window.location.href = 'index.html';
         }, 30000);
     }
+
+    giveQuestion();
 }
 
 async function loadQuestions() {
     try {
-        const response = fetch('../json/questions.json');
+        const response = await fetch('../json/questions.json');
         if (!response.ok) {
             throw new Error('HIBA: ' + response.status);
         }
@@ -445,14 +447,14 @@ function nextQuestion() {
 }
 
 function giveQuestion() {
-    if (!localStorage.getItem('hasStarted')) {
+    if (localStorage.getItem('hasStarted') != 'true') {
         generateNextQuestionId();
         localStorage.setItem('hasStarted', true);
     }
     const options = document.querySelectorAll('input[name="answer"]');
     const optionLabels = document.querySelectorAll('label');
     const questionText = document.getElementById('question-text');
-    const currentQuestionId = localStorage.getItem('currentQuestionId');
+    const currentQuestionId = localStorage.getItem('currentQuestionId') || 0;
     questionText.textContent = questions[currentQuestionId].question;
 
     const mix = [0, 1, 2, 3];
@@ -474,7 +476,7 @@ function giveQuestion() {
 
     const taskNum = parseInt(localStorage.getItem('taskNum')) || 0;
     const questionCounter = document.getElementById('question-counter');
-    questionCounter.textContent = `Kérdés ${taskNum + 1} / 20`;
+    questionCounter.textContent = `Kérdés ${taskNum} / 20`;
 
     const next_btn = document.getElementById('next-btn');
     next_btn.disabled = false;
@@ -482,7 +484,7 @@ function giveQuestion() {
 
 function generateNextQuestionId() {
     const taskNum = parseInt(localStorage.getItem('taskNum')) || 0;
-    if (taskNum + 1 >= 20) {
+    if (taskNum + 1 > 20) {
         window.location.href = 'result.html';
         return;
     }
@@ -511,7 +513,3 @@ function errorMessage(message) {
         errorDiv.style.display = 'none';
     }, 3000);
 }
-
-window.addEventListener('load', () => {
-    giveQuestion();
-});

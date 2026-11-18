@@ -1,4 +1,4 @@
-const hasStarted = localStorage.getItem('hasStarted');
+const hasStarted = localStorage.getItem('hasStarted') == 'true';
 if (hasStarted && hasStarted != null) {
     window.location.href = 'continue.html';
 }
