@@ -1,4 +1,4 @@
-const questions = [
+/*const questions = [
   {
     "id": 0,
     "question": "Mi a localStorage maximális tárolási kapacitása nagyjából domainenként a legtöbb modern böngészőben?",
@@ -384,7 +384,34 @@ const questions = [
     ],
     "correct": 0
   }
-]
+]*/
+
+let questions = [];
+window.onload = async function() {
+    const loadedQuestions = await loadQuestions();
+    if (loadedQuestions) {
+        questions = loadedQuestions;
+    } else {
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 30000);
+    }
+}
+
+async function loadQuestions() {
+    try {
+        const response = fetch('../json/questions.json');
+        if (!response.ok) {
+            throw new Error('HIBA: ' + response.status);
+        }
+
+        const questionsData = await response.json();
+        return questionsData;
+    } catch (error) {
+        errorMessage('Hiba történt a kérdések betöltése közben.\nKérlek próbáld újra!\n' + error.message);
+        return;
+    }
+}
 
 function nextQuestion() {
     const answer = document.querySelector('input[name="answer"]:checked');
