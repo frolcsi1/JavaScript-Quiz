@@ -5,13 +5,20 @@ window.onload = function() {
     ) {
         window.location.href = 'index.html';
     }
+    const points = parseInt(localStorage.getItem('points')) || 0;
+    const pointsElement = document.getElementById('points');
+    pointsElement.textContent = points;
+
+    localStorage.setItem('hasStarted', false);
+    localStorage.setItem('points', 0);
+    localStorage.setItem('taskNum', 0);
+    localStorage.setItem('usedQuestions', JSON.stringify([]));
 }
 
-const points = parseInt(localStorage.getItem('points')) || 0;
-const pointsElement = document.getElementById('points');
-pointsElement.textContent = points;
-
-localStorage.setItem('hasStarted', false);
-localStorage.setItem('points', 0);
-localStorage.setItem('taskNum', 0);
-localStorage.setItem('usedQuestions', JSON.stringify([]));
+function newQuiz() {
+    localStorage.setItem('hasStarted', false);
+    localStorage.setItem('points', 0);
+    localStorage.setItem('taskNum', 0);
+    localStorage.setItem('usedQuestions', JSON.stringify([]));
+    window.location.href='quiz.html';
+}
