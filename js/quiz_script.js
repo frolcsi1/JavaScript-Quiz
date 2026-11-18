@@ -433,7 +433,7 @@ function nextQuestion() {
     optionLabels.forEach (label => {
         label.classList.add('incorrect');
     });
-    const correctOption = document.querySelector(`input[value="${questions[questionId].options[rightAnswer]}"]`);
+    const correctOption = document.querySelector(`input[value='${questions[questionId].options[rightAnswer]}']`);
     correctOption.classList.remove('incorrect');
     correctOption.classList.add('correct');
 

@@ -1,7 +1,7 @@
 window.onload = function() {
     if (
         localStorage.getItem('hasStarted') != 'true' ||
-        localStorage.getItem('taskNum') != 20
+        localStorage.getItem('taskNum') != '20'
     ) {
         window.location.href = 'index.html';
     }
