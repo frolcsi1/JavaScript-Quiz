@@ -1,0 +1,442 @@
+[
+  {
+    "id": 40,
+    "kerdes": "Melyik metódus alakítja vissza a localStorage-ből kiolvasott JSON szöveget használható JavaScript tömbbé vagy objektummá?",
+    "valaszok": [
+      "JSON.object()",
+      "JSON.stringify()",
+      "JSON.parse()",
+      "JSON.convert()"
+    ],
+    "helyesIndex": 2
+  },
+  {
+    "id": 1,
+    "kerdes": "Melyik kulcsszóval deklarálunk olyan változót, amelynek az értéke később nem változhat meg?",
+    "valaszok": [
+      "const",
+      "function",
+      "var",
+      "let"
+    ],
+    "helyesIndex": 0
+  },
+  {
+    "id": 2,
+    "kerdes": "Melyik jelölést használjuk egysoros komment írására a JavaScriptben?",
+    "valaszok": [
+      "<!-- -->",
+      "//",
+      "/* */",
+      "#"
+    ],
+    "helyesIndex": 1
+  },
+  {
+    "id": 3,
+    "kerdes": "Melyik adattípusba tartozik a true és a false érték?",
+    "valaszok": [
+      "undefined",
+      "number",
+      "boolean",
+      "string"
+    ],
+    "helyesIndex": 2
+  },
+  {
+    "id": 4,
+    "kerdes": "Hogyan írhatunk ki üzenetet a böngésző konzoljára?",
+    "valaszok": [
+      "console.log()",
+      "document.write()",
+      "print()",
+      "alert()"
+    ],
+    "helyesIndex": 0
+  },
+  {
+    "id": 5,
+    "kerdes": "Melyik metódus ad hozzá egy elemet egy tömb végéhez?",
+    "valaszok": [
+      "shift()",
+      "push()",
+      "pop()",
+      "unshift()"
+    ],
+    "helyesIndex": 1
+  },
+  {
+    "id": 6,
+    "kerdes": "Melyik operátor ellenőrzi a szigorú egyenlőséget (értéket és típust is)?",
+    "valaszok": [
+      "!=",
+      "=",
+      "==",
+      "==="
+    ],
+    "helyesIndex": 3
+  },
+  {
+    "id": 7,
+    "kerdes": "Hogyan kérhetjük le egy tömb hosszát (elemeinek számát)?",
+    "valaszok": [
+      "tomb.count",
+      "tomb.length",
+      "tomb.size",
+      "tomb.items"
+    ],
+    "helyesIndex": 1
+  },
+  {
+    "id": 8,
+    "kerdes": "Melyik HTML elembe szoktuk betenni a külső JavaScript fájl hivatkozását?",
+    "valaszok": [
+      "<link>",
+      "<script>",
+      "<meta>",
+      "<style>"
+    ],
+    "helyesIndex": 1
+  },
+  {
+    "id": 9,
+    "kerdes": "Melyik metódussal kereshetünk meg egy elemet a HTML-ben az ID-je alapján?",
+    "valaszok": [
+      "document.getElementById()",
+      "document.getElementsByClassName()",
+      "document.querySelector()",
+      "document.getElementByTag()"
+    ],
+    "helyesIndex": 0
+  },
+  {
+    "id": 10,
+    "kerdes": "Mi a kimenete a következőnek: typeof \"Hello\"?",
+    "valaszok": [
+      "number",
+      "object",
+      "boolean",
+      "string"
+    ],
+    "helyesIndex": 3
+  },
+  {
+    "id": 11,
+    "kerdes": "Melyik metódussal tudjuk szöveggé alakítani a JavaScript objektumot vagy tömböt a mentéshez?",
+    "valaszok": [
+      "JSON.convert()",
+      "JSON.text()",
+      "JSON.parse()",
+      "JSON.stringify()"
+    ],
+    "helyesIndex": 3
+  },
+  {
+    "id": 12,
+    "kerdes": "Hogyan hozunk létre egy üres tömböt JavaScriptben?",
+    "valaszok": [
+      "let arr = {};",
+      "let arr = [];",
+      "let arr = ();",
+      "let arr = <>;"
+    ],
+    "helyesIndex": 1
+  },
+  {
+    "id": 13,
+    "kerdes": "Melyik ciklus használható arra, hogy a kód egy bizonyos feltételig ismétlődjön?",
+    "valaszok": [
+      "try",
+      "if",
+      "switch",
+      "while"
+    ],
+    "helyesIndex": 3
+  },
+  {
+    "id": 14,
+    "kerdes": "Melyik metódus távolítja el a legutolsó elemet egy tömbből?",
+    "valaszok": [
+      "pop()",
+      "unshift()",
+      "push()",
+      "shift()"
+    ],
+    "helyesIndex": 0
+  },
+  {
+    "id": 15,
+    "kerdes": "Mit ad vissza a Boolean(0) kifejezés JavaScriptben?",
+    "valaszok": [
+      "true",
+      "0",
+      "undefined",
+      "false"
+    ],
+    "helyesIndex": 3
+  },
+  {
+    "id": 16,
+    "kerdes": "Hogyan kell helyesen megírni egy koszont nevű függvényt?",
+    "valaszok": [
+      "function: koszont() {}",
+      "create function koszont() {}",
+      "def koszont() {}",
+      "function koszont() {}"
+    ],
+    "helyesIndex": 3
+  },
+  {
+    "id": 17,
+    "kerdes": "Melyik attribútummal hívunk be külső JavaScript fájlt egy HTML dokumentumba?",
+    "valaszok": [
+      "href",
+      "src",
+      "link",
+      "file"
+    ],
+    "helyesIndex": 1
+  },
+  {
+    "id": 18,
+    "kerdes": "Melyik tulajdonsággal változtathatjuk meg egy HTML elem szöveges tartalmát?",
+    "valaszok": [
+      "cssText",
+      "innerText (vagy textContent)",
+      "valueText",
+      "changeText"
+    ],
+    "helyesIndex": 1
+  },
+  {
+    "id": 19,
+    "kerdes": "Mi a neve a feltételes (hármas) operátornak?",
+    "valaszok": [
+      "loop operátor",
+      "if-else operátor",
+      "switch operátor",
+      "ternary operátor (?:)"
+    ],
+    "helyesIndex": 3
+  },
+  {
+    "id": 20,
+    "kerdes": "Melyik kulcsszó jelöli a függvény visszatérési értékét?",
+    "valaszok": [
+      "send",
+      "output",
+      "return",
+      "give"
+    ],
+    "helyesIndex": 2
+  },
+  {
+    "id": 21,
+    "kerdes": "Mit jelent a DOM rövidítés a webfejlesztésben?",
+    "valaszok": [
+      "Document Object Model",
+      "Digital Online Media",
+      "Desktop Organized Menu",
+      "Data Oriented Method"
+    ],
+    "helyesIndex": 0
+  },
+  {
+    "id": 22,
+    "kerdes": "Melyik beépített függvénnyel alakíthatunk át egy szöveget egész számmá?",
+    "valaszok": [
+      "toNumber()",
+      "parseString()",
+      "parseInt()",
+      "float()"
+    ],
+    "helyesIndex": 2
+  },
+  {
+    "id": 23,
+    "kerdes": "Hogyan adhatunk hozzá eseménykezelőt (pl. kattintást) egy gombhoz JavaScriptben?",
+    "valaszok": [
+      "gomb.click()",
+      "gomb.addEventListener()",
+      "gomb.onAction()",
+      "gomb.bind()"
+    ],
+    "helyesIndex": 1
+  },
+  {
+    "id": 24,
+    "kerdes": "Milyen indexeléstől (hanyadiktól) kezdődnek a tömbök elemei a JavaScriptben?",
+    "valaszok": [
+      "0-val",
+      "-1-gyel",
+      "bárhogy kezdődhetnek",
+      "1-gyel"
+    ],
+    "helyesIndex": 0
+  },
+  {
+    "id": 25,
+    "kerdes": "Melyik operátor jelöli a logikai ÉS (AND) kapcsolatot?",
+    "valaszok": [
+      "??",
+      "&&",
+      "||",
+      "!"
+    ],
+    "helyesIndex": 1
+  },
+  {
+    "id": 26,
+    "kerdes": "Melyik operátor jelöli a logikai VAGY (OR) kapcsolatot?",
+    "valaszok": [
+      "!",
+      "&&",
+      "==",
+      "||"
+    ],
+    "helyesIndex": 3
+  },
+  {
+    "id": 27,
+    "kerdes": "Mi a kimenete a következő összeadásnak: console.log(5 + \"5\");",
+    "valaszok": [
+      "hibaüzenet",
+      "10",
+      "\"55\"",
+      "55"
+    ],
+    "helyesIndex": 2
+  },
+  {
+    "id": 28,
+    "kerdes": "Melyik metódus távolítja el a tömb első elemét?",
+    "valaszok": [
+      "push()",
+      "shift()",
+      "pop()",
+      "unshift()"
+    ],
+    "helyesIndex": 1
+  },
+  {
+    "id": 29,
+    "kerdes": "Hogyan érhetjük el leggyakrabban egy objektum nev nevű tulajdonságát?",
+    "valaszok": [
+      "objektum(nev)",
+      "objektum->nev",
+      "objektum.nev",
+      "objektum{nev}"
+    ],
+    "helyesIndex": 2
+  },
+  {
+    "id": 30,
+    "kerdes": "Melyik szöveges metódus teszi a szöveg összes karakterét nagybetűssé?",
+    "valaszok": [
+      "toUpper()",
+      "makeCaps()",
+      "capitalize()",
+      "toUpperCase()"
+    ],
+    "helyesIndex": 3
+  },
+  {
+    "id": 31,
+    "kerdes": "Milyen fájlkiterjesztést használunk a külső JavaScript fájlokhoz?",
+    "valaszok": [
+      ".css",
+      ".js",
+      ".html",
+      ".java"
+    ],
+    "helyesIndex": 1
+  },
+  {
+    "id": 32,
+    "kerdes": "Melyik utasítással léphetünk ki egy switch szerkezetből vagy ciklusból?",
+    "valaszok": [
+      "stop",
+      "return",
+      "exit",
+      "break"
+    ],
+    "helyesIndex": 3
+  },
+  {
+    "id": 33,
+    "kerdes": "Mi a kimenete a typeof true kifejezésnek?",
+    "valaszok": [
+      "boolean",
+      "string",
+      "number",
+      "true"
+    ],
+    "helyesIndex": 0
+  },
+  {
+    "id": 34,
+    "kerdes": "Melyik metódus ad hozzá elemet a tömb elejére?",
+    "valaszok": [
+      "pop()",
+      "unshift()",
+      "shift()",
+      "push()"
+    ],
+    "helyesIndex": 1
+  },
+  {
+    "id": 35,
+    "kerdes": "Hogyan vizsgáljuk meg helyesen egy if feltételben, hogy az x változó értéke egyenlő-e 10-zel?",
+    "valaszok": [
+      "if (x == 10)",
+      "if (x = 10)",
+      "if [x == 10]",
+      "if x == 10 then"
+    ],
+    "helyesIndex": 0
+  },
+  {
+    "id": 36,
+    "kerdes": "Melyik beépített objektum segítségével generálhatunk véletlenszerű számokat?",
+    "valaszok": [
+      "Number",
+      "Calc",
+      "Random",
+      "Math"
+    ],
+    "helyesIndex": 3
+  },
+  {
+    "id": 37,
+    "kerdes": "Mit ad vissza a Math.floor(4.9) kifejezés?",
+    "valaszok": [
+      "4",
+      "4.9",
+      "5",
+      "0"
+    ],
+    "helyesIndex": 0
+  },
+  {
+    "id": 38,
+    "kerdes": "Melyik kulcsszóval definiálhatunk blokk-szintű változót, aminek az értéke később változhat?",
+    "valaszok": [
+      "static",
+      "const",
+      "let",
+      "var"
+    ],
+    "helyesIndex": 2
+  },
+  {
+    "id": 39,
+    "kerdes": "Hogyan fűzhetünk össze két szöveget (stringet) a JavaScriptben?",
+    "valaszok": [
+      "A join() függvénnyel",
+      "A & operátorral",
+      "A + operátorral (vagy template literallel)",
+      "A merge() metódussal"
+    ],
+    "helyesIndex": 2
+  }
+]
