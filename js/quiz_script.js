@@ -12,7 +12,7 @@ window.onload = async function() {
     giveQuestion();
 }
 
-async function loadQuestions() {
+export async function loadQuestions() {
     try {
         const response = await fetch('../json/questions.json');
         if (!response.ok) {
