@@ -1,4 +1,4 @@
-import { loadQuestions } from "./quiz_script.js";
+import { loadQuestions } from './load.js'
 
 window.onload = function() {
     if (
