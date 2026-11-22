@@ -1,6 +1,19 @@
-import { loadQuestions } from './load.js'
+async function loadQuestions() {
+    try {
+        const response = await fetch('../json/questions.json');
+        if (!response.ok) {
+            throw new Error('HIBA: ' + response.status);
+        }
 
-window.onload = function() {
+        const questionsData = await response.json();
+        return questionsData;
+    } catch (error) {
+        errorMessage('Hiba történt a kérdések betöltése közben.\nKérlek próbáld újra!\n' + error.message);
+        return;
+    }
+}
+
+window.onload = async function() {
     if (
         localStorage.getItem('hasStarted') != 'true' ||
         localStorage.getItem('taskNum') != '20'
@@ -11,35 +24,41 @@ window.onload = function() {
     const pointsElement = document.getElementById('points');
     pointsElement.textContent = points;
 
-    const usedQuestions = JSON.parse(localStorage('usedQuestions'));
-    const questions = loadQuestions();
-    const rightAnswersDiv = docuemnt.getElementById("rigthAnswers")
+    const usedQuestions = JSON.parse(localStorage.getItem('usedQuestions'));
+    const questions = await loadQuestions();
+    const rightAnswersDiv = document.getElementById("rigthAnswers")
 
     usedQuestions.forEach(questionId => {
+        const questionDIV = document.createElement("div");
+        rightAnswersDiv.appendChild(questionDIV);
 
-        `
-    <div class="quiz-container">
-        <h1 id="question-text">${questions[questionId].question}</h1>
+        const h1 = document.createElement("h1");
+        h1.classList.add("question-text");
+        h1.textContent = questions[questionId].question;
+        questionDIV.appendChild(h1);
 
-        <input type="radio" name="answer${questionId}" id="o0${questionId}" value="0" disabled>
-        <label for="o0${questionId}" id="o0${questionId}-label" class="${questions[questionId].correct == '0' ? 'correct' : 'incorrect'}">${questions[questionId].options[0]}</label>
-        <br>
-        <input type="radio" name="answer${questionId}" id="o1${questionId}" value="1" disabled>
-        <label for="o1${questionId}" id="o1${questionId}-label" class="${questions[questionId].correct == '1' ? 'correct' : 'incorrect'}">${questions[questionId].options[1]}</label>
-        <br>
-        <input type="radio" name="answer${questionId}" id="o2${questionId}" value="2" disabled>
-        <label for="o2${questionId}" id="o2${questionId}-label" class="${questions[questionId].correct == '2' ? 'correct' : 'incorrect'}">${questions[questionId].options[2]}</label>
-        <br>
-        <input type="radio" name="answer${questionId}" id="o3${questionId}" value="3" disabled>
-        <label for="o3${questionId}" id="o3${questionId}-label" class="${questions[questionId].correct == '3' ? 'correct' : 'incorrect'}">${questions[questionId].options[3]}</label>
-        <br>
+        for (let i = 0; i < 4; i++) {
+            const input = document.createElement("input");
+            input.type = "radio";
+            input.name = `answer${questionId}`;
+            input.name = `o${i}${questionId}`;
+            input.value = i;
+            input.disabled = true;
+            questionDIV.appendChild(input);
 
-        <p class="center" id="question-counter">0/20</p>
-    </div>`;
+            const label = document.createElement("label");
+            label.for = `o${i}${questionId}`;
+            label.id = `o${i}${questionId}-label`;
+            label.classList.add(questions[questionId].correct == i ? 'correct' : 'incorrect');
+            label.textContent = questions[questionId].options[i];
+            questionDIV.appendChild(label);
 
+            const br = document.createElement("br");
+            questionDIV.appendChild(br);
+        }
 
-
-        
+        const hr = document.createElement("hr");
+        questionDIV.append(hr);
     });
 
     localStorage.setItem('hasStarted', false);

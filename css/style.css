@@ -7,7 +7,7 @@ body {
 .error-container {
     margin: 20px auto;
     padding: 10px;
-    background-color: #ff8181;
+    background-color: rgb(255, 129, 129);
     color: rgb(119, 0, 0);
     border: 1px solid rgb(119, 0, 0);
     border-radius: 10px;
@@ -75,7 +75,14 @@ label {
     width: 80%;
     display: inline-block;
     padding: 5px;
-    margin: 5px;}
+    margin: 5px;
+}
+
+hr {
+    background-color: rgb(149 91 45);
+    border: none;
+    height: 1px;
+}
 
 .center {
     text-align: center;
@@ -87,4 +94,10 @@ label {
 
 .correct {
     background-color: rgb(200, 255, 200);
+}
+
+.question-text {
+    white-space: pre-wrap;
+    tab-size: 4;
+    font-size: large;
 }

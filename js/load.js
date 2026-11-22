@@ -1,4 +1,4 @@
-export async function loadQuestions() {
+async function loadQuestions() {
     try {
         const response = await fetch('../json/questions.json');
         if (!response.ok) {

@@ -1,4 +1,17 @@
-import { loadQuestions } from './load.js'
+async function loadQuestions() {
+    try {
+        const response = await fetch('../json/questions.json');
+        if (!response.ok) {
+            throw new Error('HIBA: ' + response.status);
+        }
+
+        const questionsData = await response.json();
+        return questionsData;
+    } catch (error) {
+        errorMessage('Hiba történt a kérdések betöltése közben.\nKérlek próbáld újra!\n' + error.message);
+        return;
+    }
+}
 
 let questions = [];
 window.onload = async function() {
@@ -39,7 +52,7 @@ function nextQuestion() {
     optionLabels.forEach (label => {
         label.classList.add('incorrect');
     });
-    const correctRadio = document.querySelector(`input[value='${questions[questionId].options[rightAnswer]}']`);
+    const correctRadio = document.querySelector(`input[value="${questions[questionId].options[rightAnswer]}"]`);
     const correctLabel = document.querySelector(`#${correctRadio.id}-label`);
     correctLabel.classList.remove('incorrect');
     correctLabel.classList.add('correct');
