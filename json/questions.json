@@ -146,10 +146,10 @@
     "id": 13,
     "question": "Hogyan lehet többsoros kommentet írni JavaScriptben?",
     "options": [
-      "/*\nEz egy komment\n*/",
-      "˚\nEz egy komment\n˚",
-      "<!--\nEz egy komment\n-->",
-      "<\nEz egy komment\n>"
+      "/*Ez egy komment*/",
+      "˚Ez egy komment˚",
+      "<!--Ez egy komment-->",
+      "<Ez egy komment>"
     ],
     "correct": 0
   },
