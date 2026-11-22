@@ -96,7 +96,7 @@ hr {
     background-color: rgb(200, 255, 200);
 }
 
-.question-text {
+.pre-wrap {
     white-space: pre-wrap;
     tab-size: 4;
     font-size: large;

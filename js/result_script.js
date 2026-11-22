@@ -33,7 +33,7 @@ window.onload = async function() {
         rightAnswersDiv.appendChild(questionDIV);
 
         const h1 = document.createElement("h1");
-        h1.classList.add("question-text");
+        h1.classList.add("pre-wrap");
         h1.textContent = questions[questionId].question;
         questionDIV.appendChild(h1);
 
@@ -50,6 +50,7 @@ window.onload = async function() {
             label.for = `o${i}${questionId}`;
             label.id = `o${i}${questionId}-label`;
             label.classList.add(questions[questionId].correct == i ? 'correct' : 'incorrect');
+            label.classList.add("pre-wrap");
             label.textContent = questions[questionId].options[i];
             questionDIV.appendChild(label);
 
