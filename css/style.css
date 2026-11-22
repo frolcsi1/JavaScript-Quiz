@@ -99,5 +99,8 @@ hr {
 .pre-wrap {
     white-space: pre-wrap;
     tab-size: 4;
+}
+
+h1.pre-wrap {
     font-size: large;
 }
