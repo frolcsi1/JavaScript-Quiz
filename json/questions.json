@@ -25,7 +25,7 @@
     "id": 2,
     "question": "Hova lehet helyesen beszúrni egy JavaScript kódot az alábbiak közül?",
     "options": [
-      "A '<head>' elég.",
+      "A '<head>' elé.",
       "A '</head>' és a '<body>' közé.",
       "A '<body>' és a '</body>' közé.",
       "A '</body>' után."
